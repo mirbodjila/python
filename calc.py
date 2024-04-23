@@ -59,13 +59,38 @@ class Ui_Form(object):
         self.pushButton_10.setObjectName("pushButton_10")
         self.pushButton_10.clicked.connect(self.showone10)
         self.pushButton_11 = QtWidgets.QPushButton(Form)
-        self.pushButton_11.setGeometry(QtCore.QRect(140, 190, 75, 23))
+        self.pushButton_11.setGeometry(QtCore.QRect(190, 220, 75, 23))
         self.pushButton_11.setObjectName("pushButton_11")
         self.pushButton_11.clicked.connect(self.result)
         self.pushButton_12 = QtWidgets.QPushButton(Form)
-        self.pushButton_12.setGeometry(QtCore.QRect(220, 190, 75, 23))
+        self.pushButton_12.setGeometry(QtCore.QRect(100, 220, 75, 23))
         self.pushButton_12.setObjectName("pushButton_12")
         self.pushButton_12.clicked.connect(self.clear)
+        self.pushButton_13 = QtWidgets.QPushButton(Form)
+        self.pushButton_13.setGeometry(QtCore.QRect(10, 180, 75, 23))
+        self.pushButton_13.setObjectName("pushButton_13")
+        self.pushButton_13.clicked.connect(self.showplus)
+        self.pushButton_14 = QtWidgets.QPushButton(Form)
+        self.pushButton_14.setGeometry(QtCore.QRect(100, 180, 75, 23))
+        self.pushButton_14.setObjectName("pushButton_14")
+        self.pushButton_14.clicked.connect(self.showminus)
+        self.pushButton_15 = QtWidgets.QPushButton(Form)
+        self.pushButton_15.setGeometry(QtCore.QRect(190, 180, 75, 23))
+        self.pushButton_15.setObjectName("pushButton_15")
+        self.pushButton_15.clicked.connect(self.showmultiple)
+        self.pushButton_16 = QtWidgets.QPushButton(Form)
+        self.pushButton_16.setGeometry(QtCore.QRect(280, 180, 75, 23))
+        self.pushButton_16.setObjectName("pushButton_16")
+        self.pushButton_16.clicked.connect(self.showdevide)
+       
+       
+       
+       
+       
+       
+       
+        
+
 
 
         self.retranslateUi(Form)
@@ -89,7 +114,18 @@ class Ui_Form(object):
     def showone9(self):
         ui.lineEdit.setText(ui.lineEdit.text()+"9") 
     def showone10(self):
-        ui.lineEdit.setText(ui.lineEdit.text()+"10")    
+        ui.lineEdit.setText(ui.lineEdit.text()+"10")  
+    def showplus(self):
+        ui.lineEdit.setText(ui.lineEdit.text()+"+")  
+    def showminus(self):
+        ui.lineEdit.setText(ui.lineEdit.text()+"-")  
+    def showmultiple(self):
+        ui.lineEdit.setText(ui.lineEdit.text()+"*") 
+    def showdevide(self):
+        ui.lineEdit.setText(ui.lineEdit.text()+"/")  
+                  
+                 
+                      
     def result(self):
         exp=ui.lineEdit.text()
         r=eval(exp)
@@ -115,8 +151,10 @@ class Ui_Form(object):
         self.pushButton_10.setText(_translate("Form", "0"))
         self.pushButton_11.setText(_translate("Form", "="))
         self.pushButton_12.setText(_translate("Form", "c"))
-
-
+        self.pushButton_13.setText(_translate("Form", "+"))
+        self.pushButton_14.setText(_translate("Form", "-"))
+        self.pushButton_15.setText(_translate("Form", "*"))
+        self.pushButton_16.setText(_translate("Form", "/"))
 
 if __name__ == "__main__":
     import sys
