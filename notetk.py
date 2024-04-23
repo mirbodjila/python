@@ -24,8 +24,8 @@ def save_file():
     open_file.close()
        
 def copy():
-       
-    pass
+       text_box
+    
 
 
 def cut():
@@ -48,9 +48,10 @@ file_menu.add_separator()
 file_menu.add_command(label="Exit",command=window.destroy)
 edit_menu = Menu(menubar,tearoff=0)
 menubar.add_cascade(label="Edit",menu=edit_menu)
-edit_menu.add_command(label="Copy",command=copy)
-edit_menu.add_command(label="Cut",command=cut)
-edit_menu.add_command(label="Paste",command=paste)
+edit_menu.add_command(label="Copy",command=lambda:window.focus_get().event_generate('<<Copy>>'))
+edit_menu.add_command(label="Cut",command=lambda:window.focus_get().event_generate('<<Cut>>'))
+
+edit_menu.add_command(label="Paste",command=lambda:window.focus_get().event_generate('<<Paste>>'))
 help_menu = Menu(menubar,tearoff=0)
 menubar.add_cascade(label="Help",menu=help_menu)
 help_menu.add_command(label="About")

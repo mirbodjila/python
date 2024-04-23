@@ -83,16 +83,6 @@ class Ui_Form(object):
         self.pushButton_16.setObjectName("pushButton_16")
         self.pushButton_16.clicked.connect(self.showdevide)
        
-       
-       
-       
-       
-       
-       
-        
-
-
-
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
     def showone(self):
@@ -123,9 +113,6 @@ class Ui_Form(object):
         ui.lineEdit.setText(ui.lineEdit.text()+"*") 
     def showdevide(self):
         ui.lineEdit.setText(ui.lineEdit.text()+"/")  
-                  
-                 
-                      
     def result(self):
         exp=ui.lineEdit.text()
         r=eval(exp)

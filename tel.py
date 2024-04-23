@@ -118,24 +118,22 @@ class Ui_Form(object):
         finally:
             con.close()  
     def search(self):
-        try:
+        # try:
             con = sqlite3.connect("telephon.db") 
             id = (int)(self.lineEdit.text())
-            name = self.lineEdit_2.text()
-            family = self.lineEdit_3.text()
-            # telnumber = self.lineEdit_4.text()
-
+            (id)
             data = [id]
-            data = con.execute("select telnumber from daftartel where id = ?", data)
-            for item in data:
-                self.lineEdit_4.text = item[0]
-                print(item[0])
-            con.commit()
+            print(data)
+            data1 = con.execute("select telnumber from daftartel where id = ?", data)
+            
+            for item in data1:
+                self.lineEdit_4.setText(str(item[0]))
+                
             print("ok")
-        except Exception as err:
-            print(f"Unexpected {err=}")
-            print("error in search.") 
-        finally:
+        # except Exception as err:
+        #     print(f"Unexpected {err=}")
+        #     print("error in search.") 
+        # finally:
             con.close()                 
     def update(self):
         try:
